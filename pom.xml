@@ -21,6 +21,14 @@
         <start-class>io.blocksabre.ethereum.Application</start-class>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>oss.jfrog.org</id>
+            <name>Repository from Bintray</name>
+            <url>http://dl.bintray.com/ethereum/maven</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,6 +72,11 @@
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ethereum</groupId>
+            <artifactId>ethereumj-core</artifactId>
+            <version>1.5.0-RELEASE</version>
         </dependency>
     </dependencies>
 
