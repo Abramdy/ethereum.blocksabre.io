@@ -63,7 +63,7 @@ public class RESTController {
 
         thisAddressRecord.setAddress(address);
         thisAddressRecord.setBalance(0.203224888);
-        thisAddressRecord.setTransactions(5);
+        thisAddressRecord.setTransactionCount(5);
         thisList.add(thisAddressRecord);
 
         genericJsonResponse.setResult(thisList);

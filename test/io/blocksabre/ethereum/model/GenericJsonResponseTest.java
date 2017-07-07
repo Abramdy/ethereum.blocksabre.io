@@ -33,7 +33,7 @@ public class GenericJsonResponseTest {
 
         test1AddressRecord.setAddress("0x063bd9c5e2fdc9da53a8718377c3b82678d3c7c8");
         test1AddressRecord.setBalance(0.203224888);
-        test1AddressRecord.setTransactions(5);
+        test1AddressRecord.setTransactionCount(5);
 
         testAddressList.add(test1AddressRecord);
 
@@ -63,7 +63,7 @@ public class GenericJsonResponseTest {
     @Test
     public void toString_StringReturned_Passes() throws Exception {
         Assert.assertEquals( "toString() has failed",
-                "GenericJsonResponse{status=0, result=[AddressRecord{address='0x063bd9c5e2fdc9da53a8718377c3b82678d3c7c8', balance=0.203224888, transactions=5}], error='null}",
+                "GenericJsonResponse{status=0, result=[AddressRecord{address='0x063bd9c5e2fdc9da53a8718377c3b82678d3c7c8', balance=0.203224888, transactionCount=5}], error='null}",
                 test1GerericJsonResponse.toString());
 
     }

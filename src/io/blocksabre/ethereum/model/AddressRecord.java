@@ -12,7 +12,7 @@ public class AddressRecord {
 
     String address;
     Double balance;
-    int transactions;
+    int transactionCount;
 
     public String getAddress() {
         return address;
@@ -30,12 +30,12 @@ public class AddressRecord {
         this.balance = balance;
     }
 
-    public int getTransactions() {
-        return transactions;
+    public int getTransactionCount() {
+        return transactionCount;
     }
 
-    public void setTransactions(int transactions) {
-        this.transactions = transactions;
+    public void setTransactionCount(int transactions) {
+        this.transactionCount = transactions;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class AddressRecord {
         return "AddressRecord{" +
                 "address='" + address + '\'' +
                 ", balance=" + balance +
-                ", transactions=" + transactions +
+                ", transactionCount=" + transactionCount +
                 '}';
     }
 }
