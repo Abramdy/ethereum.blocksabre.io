@@ -16,7 +16,7 @@ public class Application {
             LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        logger.info("Starting up ethereum.blocksabre.info...");
+        logger.info("Starting up ethereum.blocksabre.io...");
         SpringApplication.run(Application.class, args);
     }
 }

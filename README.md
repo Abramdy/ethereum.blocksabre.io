@@ -1,6 +1,6 @@
 # Ethereum Block Explorer
 
-REST block explorer server for the Ethereum network
+Block explorer server for the Ethereum network
 
 ### Build Status and Test Coverage
 [![Build Status](https://travis-ci.org/blocksabre/ethereum.blocksabre.io.svg?branch=master)](https://travis-ci.org/blocksabre/ethereum.blocksabre.io)

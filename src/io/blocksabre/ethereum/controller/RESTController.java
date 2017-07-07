@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The RESTController is the main controller where all the APIs are
+ * The RESTController is the controller where all the APIs are
  * called from.
  *
  * @author  Andy McCall
@@ -20,7 +20,7 @@ import java.util.List;
  * @since   2017-07-07
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/")
 public class RESTController {
 
     private static final Logger logger =
