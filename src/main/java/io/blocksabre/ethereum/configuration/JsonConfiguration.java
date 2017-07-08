@@ -17,11 +17,10 @@ import java.util.List;
  * needed such as the Jackson Json object mapper.
  *
  * @author  Andy McCall, Blocksabre.com
- * @version 0.1
+ * @version 0.2
  * @since   2017-07-07
  */
 @Configuration
-@EnableWebMvc
 public class JsonConfiguration extends WebMvcConfigurerAdapter {
 
     @Override

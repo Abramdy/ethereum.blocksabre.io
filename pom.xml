@@ -7,9 +7,9 @@
     <groupId>io.blocksabre.ethereum</groupId>
     <artifactId>ioblocksabreethereum</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>jar</packaging>eeeeeeeeeeeeeeeeeeeeeeeee
 
-    <name>ethereum.blocksabre.io</name>
+    <name>io.blocksabre.ethereum.io.blocksabre.io</name>
     <description>Ethereum Block Explorer</description>
 
     <parent>
@@ -22,7 +22,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <start-class>io.blocksabre.ethereum.Application</start-class>
+        <start-class>io.io.blocksabre.io.blocksabre.ethereum.Application</start-class>
     </properties>
 
     <dependencies>
@@ -72,10 +72,10 @@
 
     <build>
         <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>test</testSourceDirectory>
+        <testSourceDirectory>src/main/test</testSourceDirectory>
         <resources>
             <resource>
-                <directory>resources</directory>
+                <directory>src/main/resources</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
