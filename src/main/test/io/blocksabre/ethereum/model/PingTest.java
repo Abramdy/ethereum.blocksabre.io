@@ -8,7 +8,7 @@ import org.junit.Test;
  * The PingTest class is a test class that tests Ping.
  *
  * @author  Andy McCall, andy.mccall@blocksabre.com
- * @version 0.2
+ * @version 0.3
  * @since   2017-07-07
  */
 public class PingTest {
@@ -28,7 +28,7 @@ public class PingTest {
      * Tests Ping.getResponse()
      */
     @Test
-    public void getResponse_ResponseIsGot_Passes() throws Exception {
+    public void getResponse_Known_Response() throws Exception {
         Assert.assertEquals("getResponse() has failed",
                 "pong", testPing.getResponse());
     }

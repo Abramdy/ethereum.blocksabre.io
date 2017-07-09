@@ -8,7 +8,7 @@ import org.junit.Test;
  * The PingJsonResponseTest class is a test class that tests PingJsonResponse
  *
  * @author  Andy McCall, andy.mccall@blocksabre.com
- * @version 0.3
+ * @version 0.4
  * @since   2017-01-25
  */
 public class PingJsonResponseTest {
@@ -39,7 +39,7 @@ public class PingJsonResponseTest {
      * Tests PingJsonResponse.getResult() with a known value
      */
     @Test
-    public void getResult() throws Exception {
+    public void getResult_Known_Result() throws Exception {
         Assert.assertEquals("getResult() has failed",
                 test1PingJsonResponse.getResult().getResponse(), expectedResponse);
     }
@@ -48,7 +48,7 @@ public class PingJsonResponseTest {
      * Tests PingJsonResponse.setResult() with a Ping()
      */
     @Test
-    public void setResult() throws Exception {
+    public void setResult_Known_Result() throws Exception {
         test2PingJsonResponse.setResult(testPing);
         Assert.assertEquals("setResult() has failed",
                 test2PingJsonResponse.getResult().getResponse(), expectedResponse);

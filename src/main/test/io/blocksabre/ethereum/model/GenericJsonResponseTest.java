@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The AddressRecordJsonResponseTest class is a test class
- * that tests AddressRecordJsonResponseTest.
+ * The GenericJsonResponseTest class is a test class
+ * that tests GenericJsonResponse.
  *
  * @author  Andy McCall, andy.mccall@blocksabre.com
  * @version 0.1
@@ -34,7 +34,6 @@ public class GenericJsonResponseTest {
     @Before
     public void setUp() throws Exception {
 
-
         testAddressRecord = new AddressRecord();
         test1GerericJsonResponse = new GenericJsonResponse();
         test2GerericJsonResponse = new GenericJsonResponse();
@@ -54,7 +53,7 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.getResult() with a known value
      */
     @Test
-    public void getResult() throws Exception {
+    public void getResult_Known_Result() throws Exception {
         Assert.assertEquals("getResult() has failed",
                 test1GerericJsonResponse.getResult(), testAddressList);
 
@@ -64,7 +63,7 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.setResult() with a known value
      */
     @Test
-    public void setResult() throws Exception {
+    public void setResult_Known_Result() throws Exception {
         test2GerericJsonResponse.setResult(testAddressList);
         Assert.assertEquals("getResult() has failed",
                 test2GerericJsonResponse.getResult(), testAddressList);
@@ -74,7 +73,7 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.getStatus() with a known value
      */
     @Test
-    public void getStatus() throws Exception {
+    public void getStatus_Known_Status() throws Exception {
         Assert.assertEquals("getStatus() has failed",
                 test1GerericJsonResponse.getStatus(), testStatus);
 
@@ -84,7 +83,7 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.setStatus() with a known value
      */
     @Test
-    public void setStatus() throws Exception {
+    public void setStatus_Known_Status() throws Exception {
         test2GerericJsonResponse.setStatus(testStatus);
         Assert.assertEquals("setStatus() has failed",
                 test2GerericJsonResponse.getStatus(), testStatus);
@@ -95,7 +94,7 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.getError() with a known value
      */
     @Test
-    public void getError() throws Exception {
+    public void getError_Known_String() throws Exception {
         Assert.assertNull("getError() has failed",
                 test1GerericJsonResponse.getError());
 
@@ -105,11 +104,19 @@ public class GenericJsonResponseTest {
      * Tests GenericJsonResponse.setError() with a known value
      */
     @Test
-    public void setError() throws Exception {
+    public void setError_Known_String() throws Exception {
         test2GerericJsonResponse.setError(testError);
         Assert.assertEquals("setError() has failed",
                 test2GerericJsonResponse.getError(), testError);
 
+    }
+
+    /**
+     * Tests GenericJsonResponse.setError_Null_String() with a null value
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void setError_Null_String() throws Exception {
+        test2GerericJsonResponse.setError("");
     }
 
     /**

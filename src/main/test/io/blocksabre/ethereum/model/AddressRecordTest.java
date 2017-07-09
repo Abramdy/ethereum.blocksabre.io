@@ -4,10 +4,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
- * Created by Andy McCall on 08/07/2017.
+ * The AddressRecordTest class is a test class
+ * that tests AddressRecord.
+ *
+ * @author  Andy McCall, andy.mccall@blocksabre.com
+ * @version 0.1
+ * @since   2017-07-07
  */
 public class AddressRecordTest {
 
@@ -36,7 +39,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.getAddress() with a known value
      */
     @Test
-    public void getAddress() throws Exception {
+    public void getAddress_Known_Address() throws Exception {
         Assert.assertEquals("getAddress() has failed",
                 testAddressRecord.getAddress(), testAddress);
     }
@@ -45,7 +48,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.setAddress() with a known value
      */
     @Test
-    public void setAddress() throws Exception {
+    public void setAddress_Known_Address() throws Exception {
         testAddressRecord.setAddress(testAddress);
         Assert.assertEquals("setResult() has failed",
                 testAddressRecord.getAddress(), testAddress);
@@ -55,7 +58,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.getBalance() with a known value
      */
     @Test
-    public void getBalance() throws Exception {
+    public void getBalance_Known_Balance() throws Exception {
         Assert.assertEquals("getBalance() has failed",
                 testAddressRecord.getBalance(), testBalance);
     }
@@ -64,7 +67,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.setBalance() with a known value
      */
     @Test
-    public void setBalance() throws Exception {
+    public void setBalance_Known_Balance() throws Exception {
         testAddressRecord.setBalance(testBalance);
         Assert.assertEquals("setBalance() has failed",
                 testAddressRecord.getBalance(), testBalance);
@@ -74,7 +77,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.getTransactionCount() with a known value
      */
     @Test
-    public void getTransactionCount() throws Exception {
+    public void getTransactionCount_Known_Count() throws Exception {
         Assert.assertEquals("getTransactionCount() has failed",
                 testAddressRecord.getTransactionCount(), testTransactionCount);
     }
@@ -83,7 +86,7 @@ public class AddressRecordTest {
      * Tests AddressRecord.setBalance() with a known value
      */
     @Test
-    public void setTransactionCount() throws Exception {
+    public void setTransactionCount_Known_Count() throws Exception {
         testAddressRecord.setTransactionCount(testTransactionCount);
         Assert.assertEquals("setTransactionCount() has failed",
                 testAddressRecord.getTransactionCount(), testTransactionCount);
