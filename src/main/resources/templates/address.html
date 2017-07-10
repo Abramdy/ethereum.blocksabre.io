@@ -5,7 +5,6 @@
 <head>
 
     <div th:include="fragments/header :: header"></div>
-    <script src="/app/ping.js"/>
 
 </head>
 
@@ -16,11 +15,12 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div ng-controller="ping">
-                <p>The status is {{pingResponse.status}}</p>
-                <p>The response is {{pingResponse.result.response}}</p>
+            <div ng-controller="address">
+                <p>Address : {{addressResponse.address}}</p>
+                <p>Balance : {{addressResponse.result.balance}}</p>
+                <p>Transactions : {{addressResponse.result.transaction_count}}</p>
             </div>
-         </div>
+        </div>
     </div>
 </div>
 

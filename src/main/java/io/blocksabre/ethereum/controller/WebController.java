@@ -23,9 +23,15 @@ public class WebController {
             LoggerFactory.getLogger(WebController.class);
 
     @RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
-    public String index() {
+    public String address() {
 
         return "index";
+    }
+
+    @RequestMapping(value = {"/", "address"}, method = RequestMethod.GET)
+    public String index() {
+
+        return "address";
     }
 
     @RequestMapping(value = {"ping"}, method = RequestMethod.GET)
