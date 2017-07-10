@@ -16,14 +16,14 @@ import static org.junit.Assert.*;
  */
 public class NetworkTest {
 
-    Network network;
-
     /**
-     * Sets up objects needed for the tests.
+     * Tests AddressRecord.toString()
      */
-    @Before
-    public void setUp() throws Exception {
-        network = Network.ROPSTEN_TESTNET;
+    @Test
+    public void Network_Constructor_Passes() {
+        Network network = Network.ETHEREUM_MAINNET;
+        Assert.assertEquals( "Network() has failed",
+                "Ethereum Mainnet", network.toString());
     }
 
     /**
@@ -31,9 +31,29 @@ public class NetworkTest {
      */
     @Test
     public void toString_StringReturned_Passes() throws Exception {
+
+        Network network;
+
+        network = Network.ETHEREUM_MAINNET;
         Assert.assertEquals( "toString() has failed",
-                "Ropsten Testnet",
-                network.toString());
+                "Ethereum Mainnet", network.toString());
+
+        network = Network.MORDEN_TESTNET;
+        Assert.assertEquals( "toString() has failed",
+                "Morden Testnet", network.toString());
+
+        network = Network.ROPSTEN_TESTNET;
+        Assert.assertEquals( "toString() has failed",
+                "Ropsten Testnet",network.toString());
+
+        network = Network.RINKEBY_TESTNET;
+        Assert.assertEquals( "toString() has failed",
+                "Rinkeby Testnet",network.toString());
+
+        network = Network.KOVAN_TESTNET;
+        Assert.assertEquals( "toString() has failed",
+                "Kovan Testnet",network.toString());
+
     }
 
 }
