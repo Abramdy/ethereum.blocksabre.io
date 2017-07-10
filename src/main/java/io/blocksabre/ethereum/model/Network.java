@@ -18,11 +18,24 @@ public enum Network {
 
     private int network;
 
-    private Network(int network) {
+    Network(int network) {
         this.network = network;
     }
 
     private int getNetwork() {
         return network;
     }
+
+    @Override
+    public String toString() {
+        switch(this) {
+            case ETHEREUM_MAINNET: return "Ethereum Mainnet";
+            case MORDEN_TESTNET: return "Morden Testnet";
+            case ROPSTEN_TESTNET: return "Ropsten Testnet";
+            case RINKEBY_TESTNET: return "Rinkeby Testnet";
+            case KOVAN_TESTNET: return "Kovan Testnet";
+            default: throw new IllegalArgumentException();
+        }
+    }
+
 }
