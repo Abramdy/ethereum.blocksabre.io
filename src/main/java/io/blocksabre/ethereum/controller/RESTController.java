@@ -1,9 +1,7 @@
 package io.blocksabre.ethereum.controller;
 
-import io.blocksabre.ethereum.model.AddressRecord;
-import io.blocksabre.ethereum.model.GenericJsonResponse;
-import io.blocksabre.ethereum.model.Ping;
-import io.blocksabre.ethereum.model.PingJsonResponse;
+import io.blocksabre.ethereum.dao.EthereumNetworkDAOImpl;
+import io.blocksabre.ethereum.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -74,4 +72,17 @@ public class RESTController {
 
     }
 
+    /**
+     * Gets the JsonNetworkResponse of the connected Geth node.
+     * @return JsonNetworkResponse.
+     */
+    @RequestMapping(value = "/block", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
+    public @ResponseBody
+    JsonNetworkResponse getBlock() {
+
+        EthereumNetworkDAOImpl testET = new EthereumNetworkDAOImpl();
+
+        return testET.getBlock();
+
+    }
 }
